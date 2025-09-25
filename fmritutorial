@@ -1,0 +1,15 @@
+# neurodesk
+https://www.neurodesk.org/
+
+# andysbrainbook
+https://andysbrainbook.readthedocs.io/en/latest/
+
+
+# Install (not download)
+datalad install https://github.com/OpenNeuroDatasets/ds000102.git
+
+# Download
+cd ds000102/
+datalad get sub-01
+
+
