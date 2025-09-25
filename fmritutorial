@@ -4,12 +4,26 @@ https://www.neurodesk.org/
 # andysbrainbook
 https://andysbrainbook.readthedocs.io/en/latest/
 
-
-# Install (not download)
+# Install dataset (not download)
 datalad install https://github.com/OpenNeuroDatasets/ds000102.git
 
-# Download
+# Download dataset
 cd ds000102/
 datalad get sub-01
 
+# formatting responses
+cd ds000102
+wget https://raw.githubusercontent.com/andrewjahn/FSL_Scripts/refs/heads/master/make_FSL_Timings.sh
+bash ./make_FSL_Timings.sh
 
+# spatial normalization
+flirt -in filtered_func_data.nii.gz \
+      -ref $FSLDIR/data/standard/MNI152_T1_2mm_brain.nii.gz \
+      -applyxfm -init reg/example_func2standard.mat \
+      -out filtered_func_data_standard.nii.gz
+
+# install functionnectome
+pip install git+https://github.com/NotaCS/Functionnectome.git
+
+# run
+FunctionnectomeGUI
