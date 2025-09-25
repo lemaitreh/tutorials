@@ -4,10 +4,10 @@ https://www.neurodesk.org/
 # andysbrainbook
 https://andysbrainbook.readthedocs.io/en/latest/
 
-# Install dataset (not download)
+# install dataset (not download)
 datalad install https://github.com/OpenNeuroDatasets/ds000102.git
 
-# Download dataset
+# download dataset
 cd ds000102/
 datalad get sub-01
 
@@ -25,5 +25,5 @@ flirt -in filtered_func_data.nii.gz \
 # install functionnectome
 pip install git+https://github.com/NotaCS/Functionnectome.git
 
-# run
+# run functionnectome
 FunctionnectomeGUI
