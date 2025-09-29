@@ -1,10 +1,13 @@
 # neurodesk
 https://www.neurodesk.org/
+https://donations.uq.edu.au/EAINNEUR
+
 
 # andysbrainbook
-https://andysbrainbook.readthedocs.io/en/latest/
+website: https://andysbrainbook.readthedocs.io/en/latest/
 
 # install dataset (not download)
+website: https://openneuro.org/datasets/ds000102/versions/00001 
 datalad install https://github.com/OpenNeuroDatasets/ds000102.git
 
 # download dataset
@@ -23,7 +26,10 @@ flirt -in filtered_func_data.nii.gz \
       -out filtered_func_data_standard.nii.gz
 
 # install functionnectome
+website: https://github.com/NotaCS/Functionnectome
 pip install git+https://github.com/NotaCS/Functionnectome.git
 
 # run functionnectome
 FunctionnectomeGUI
+
+
